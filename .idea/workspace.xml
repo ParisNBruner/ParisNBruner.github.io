@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="jbrunerwa &lt;32610078+jbrunerwa@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="ics" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="344" y="32" key="CommitChangelistDialog2" timestamp="1609221514124">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="344" y="32" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1609221514124" />
+    <state x="337" y="169" key="Vcs.Push.Dialog.v2" timestamp="1609221516938">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="337" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1609221516938" />
+    <state x="520" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609221530076">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="520" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1609221530076" />
   </component>
 </project>
