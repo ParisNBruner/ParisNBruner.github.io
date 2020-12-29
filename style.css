@@ -57,4 +57,10 @@ nav ul li a{
     color:#6d6d6d;
     font-size:22px;
 }
-.text-container
+.text-container p:nth-child(2){
+    font-family: calibri;
+    font-weight:bold;
+    letter-spacing: 1px;
+    color:#lalala;
+    font-size:60px;
+}

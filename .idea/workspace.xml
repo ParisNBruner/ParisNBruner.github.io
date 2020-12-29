@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="288584bf-6b5b-45f3-a3bd-7440f28213c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Paris" />
         <option value="ParisNBruner &lt;bittybit99@me.com&gt;" />
         <option value="jbrunerwa &lt;32610078+jbrunerwa@users.noreply.github.com&gt;" />
       </list>
@@ -39,6 +40,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="list.type.of.created.stylesheet" value="textmate" />
     <property name="settings.editor.selected.configurable" value="ics" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -78,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609276987965</updated>
-      <workItem from="1609276989374" duration="320000" />
+      <workItem from="1609276989374" duration="984000" />
     </task>
     <task id="LOCAL-00005" summary="hopefully it is fixed">
       <created>1609277101203</created>
@@ -87,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609277101203</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Nav Bar styling and background photo added">
+      <created>1609277426924</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609277426924</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,22 +109,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="still testing" />
     <MESSAGE value="hopefully it is fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="hopefully it is fixed" />
+    <MESSAGE value="Nav Bar styling and background photo added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nav Bar styling and background photo added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3445" y="-641" key="CommitChangelistDialog2" timestamp="1609277101064">
+    <state x="3437" y="-641" key="CommitChangelistDialog2" timestamp="1609277426820">
       <screen x="3200" y="-662" width="1080" height="1920" />
     </state>
     <state x="3445" y="-641" key="CommitChangelistDialog2/0.0.1280.800/3200.-662.1080.1920/1280.-177.1920.1080@3200.-662.1080.1920" timestamp="1609277101064" />
+    <state x="3437" y="-641" key="CommitChangelistDialog2/0.23.1280.777/3200.-662.1080.1920/1280.-154.1920.1057@3200.-662.1080.1920" timestamp="1609277426820" />
     <state x="344" y="32" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1609221721566" />
-    <state x="337" y="169" key="Vcs.Push.Dialog.v2" timestamp="1609221723584">
-      <screen x="0" y="23" width="1440" height="831" />
-    </state>
-    <state x="337" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1609221723584" />
-    <state x="3590" y="100" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609277083474">
+    <state x="3453" y="-325" key="Vcs.Push.Dialog.v2" timestamp="1609277429087">
       <screen x="3200" y="-662" width="1080" height="1920" />
     </state>
-    <state x="3590" y="100" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800/3200.-662.1080.1920/1280.-177.1920.1080@3200.-662.1080.1920" timestamp="1609277083474" />
+    <state x="3453" y="-325" key="Vcs.Push.Dialog.v2/0.23.1280.777/3200.-662.1080.1920/1280.-154.1920.1057@3200.-662.1080.1920" timestamp="1609277429087" />
+    <state x="337" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1609221723584" />
+    <state x="3590" y="100" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609278142339">
+      <screen x="3200" y="-662" width="1080" height="1920" />
+    </state>
+    <state x="3590" y="100" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800/3200.-662.1080.1920/1280.-177.1920.1080@3200.-662.1080.1920" timestamp="1609278142339" />
     <state x="520" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1609221530076" />
   </component>
 </project>
