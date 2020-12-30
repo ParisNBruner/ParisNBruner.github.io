@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="288584bf-6b5b-45f3-a3bd-7440f28213c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Paris_Bruner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Paris_Bruner.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +25,13 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Paris Bruner &lt;parisnbruner@users.noreply.github.com&gt;" />
         <option value="ParisNBruner &lt;bittybit99@me.com&gt;" />
         <option value="Paris" />
         <option value="jbrunerwa &lt;32610078+jbrunerwa@users.noreply.github.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1mLdpQn4SbVnDusJF9E07hhNGmZ" />
   <component name="ProjectViewState">
@@ -34,15 +40,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="list.type.of.created.stylesheet" value="textmate" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="ics" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.idea" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,7 +96,7 @@
       <workItem from="1609276989374" duration="1272000" />
       <workItem from="1609278404244" duration="12000" />
       <workItem from="1609279678439" duration="85000" />
-      <workItem from="1609279776308" duration="438000" />
+      <workItem from="1609279776308" duration="6075000" />
     </task>
     <task id="LOCAL-00005" summary="hopefully it is fixed">
       <created>1609277101203</created>
@@ -110,7 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609278186466</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Buttons added and initial font">
+      <created>1609280221189</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609280221189</updated>
+    </task>
+    <task id="LOCAL-00009" summary="images added">
+      <created>1609280357351</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609280357352</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +144,7 @@
     <MESSAGE value="hopefully it is fixed" />
     <MESSAGE value="Nav Bar styling and background photo added" />
     <MESSAGE value="Buttons added and initial font" />
-    <option name="LAST_COMMIT_MESSAGE" value="Buttons added and initial font" />
+    <MESSAGE value="images added" />
+    <option name="LAST_COMMIT_MESSAGE" value="images added" />
   </component>
 </project>
