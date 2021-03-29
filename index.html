@@ -1,39 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title>Paris Bruner Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<section>
-    <!--Navigation -->
-    <nav>
-        <!--        Logo-->
-        <a href="#" class="logo">Paris Bruner</a>
-        <!--        menu-->
-        <ul class="nav">
-            <li><a href="#" class="active">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class = "toggle"></div>
-    </nav>
-    <!--    text-->
-    <div class ="text-container">
-        <p>Hello</p>
-        <p>I'm Paris</p>
-        <P> I am a senior at UW Bothell</P>
-        <button class="hure-btn">Hire Me</button>
-        <button class="down-cv"> Download CV</button>
-    </div>
+  <section>
+  	<!--navigation------------------------->
+  	<nav>
+  	<!--logo-->
+  	<a href="#" class="logo">Paris Bruner Portfolio</a>
+  	<!--menu-->
+  	<ul>
+  	<li><a href="#">Projects</a></li>
+  	<li><a href="#">Skills</a></li>
+    <li><a href="#">Contact</a></li>
+  	</ul>
+  	<!--bars--------------->
+  	<div class="toggle"></div>
 
-    <!--model-->
-    <!--<img src="Paris_Bruner.jpg" class="model" alt="picture of Paris">-->
-</section>
+  	</nav>
+    </section>
+    <!--text----------------------->
+    		<div class="text-container">
+    			<p>Hello,</p>
+    		    <p>I&#8217;M Paris</p>
+            <br></br>
+    			<button class="hire-btn">Hire me</button>
+    			<button class="down-cv">Download CV</button>
+    		</div>
+    	<!--model---------------------->
+    	<img alt="model" class="model" src="images/Paris_Bruner.jpg">
+
+      <div class="about-container">
+<!--img-->
+  <img src="images/Paris_Bruner.jpg"/>
+<!--about-me-text-->
+  <div class="about-text">
+  <p>About Me</p>
+  <p>Devolper & Designer</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>    Lorem ipsum dolor sit amet, consectetur adipisci</p>
+  <button>University Experience</button>
+  </div>
+</div>
+
+<!--services-container---------------------------->
+<div class="services ">
+  <!--text-->
+  <div class="services-text ">
+<p>Majors</p>
+<p>My Majors and their respective Skills</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  <div class="box-container">
+  <!--1------------->
+    <div class="box-1">
+    <span>1</span>
+    <p class="heading">Mathematical Modeling and Vizualization</p>
+    <p class="details">if you want make a software for your bussniess conatact me.I make as soon as possibale.You really like my work, if you don&#8217;t i change this until you like if you want.</p>
+    <button onclick="https://www.uwb.edu/mathematical-thinking-visualization">Read More</button>
+    </div>
+   <!--2------------->
+    <div class="box-2">
+    <span>2</span>
+    <p class="heading">Applied Computing</p>
+    <p class="details">if you want make a software for your bussniess conatact me.I make as soon as possibale.You really like my work, if you don&#8217;t i change this until you like if you want.</p>
+    <button>Read More</button>
+    </div>
+  <!--3------------->
+    <div class="box-3">
+    <span>3</span>
+    <p class="heading">Society Ethics and Human Behavior</p>
+    <p class="details">if you want make a software for your bussniess conatact me.I make as soon as possibale.You really like my work, if you don&#8217;t i change this until you like if you want.</p>
+    <button>Read More</button>
+    </div>
+  </div>
+</div>
+
+<!--footer--------------->
+ <footer>
+	 <!--heading-->
+  <p>Paris Bruner Portfolio Site</p>
+	 <!--paragraph-->
+	 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint o</p>
+	 <!--social-->
+	<div class="social-icons">
+	<a href="https://www.linkedin.com/in/paris-bruner-175840149"><i class="fab fa-linkedin"></i></a>
+	<a href="https://github.com/ParisNBruner"><i class="fab fa-github"></i></a>
+	</div>
+	 <!--copyright-->
+	 <p class="copyright">Copyright by Paris Bruner</p>
+</footer>
+
+
+<!--JQUery-------------------->
+<script type="text/javascript" src="js/JQuery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.toggle').click(function(){
+    $('.toggle').toggleClass('active')
+    $('nav').toggleClass('active')
+  })
+})
+</script>
 
 </body>
 </html>
