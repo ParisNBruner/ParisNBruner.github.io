@@ -1,107 +1,54 @@
 @charset "utf-8";
-/*Style sheet for paris's portfolio */
+/* CSS Document */
 body{
-    background-color:#f6f5f5;
-    margin: 0px;
-    padding:0px;
+  background-color:#f6f5f5;
+  margin:0px;
+  padding:0px;
 }
-
 ul{
-    list-style: none;
+  list-style:none;
 }
-
 a{
-    text-decoration:none;
+  text-decoration:none;
 }
 section{
-    width: 100%;
-    height:95vh;
-    background-image:url("sky-background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:relative
+  width:100%;
+  height:95vh;
+  background-image:url("../images/bg.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  position: relative;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
-    padding: 0px 5%;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height:60px;
+  background-color:#ffffff;
+  box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+  padding:0px 5%;
+
 }
 nav ul{
-    display:flex;
+  display: flex;
 }
+.toggle{
+  display: none;
+}
+
 nav ul li a{
-    margin:30px;
-    font-family: myriad pro regular;
-    color:#505050;
-    font-size:15px;
-    font-weight:700;
+  margin:30px;
+  font-family:myriad pro regular;
+  color:#505050;
+  font-size: 15px;
+  font-weight:700;
 }
 .logo{
-
-/*  TODO: Font not showing up correctly*/
-    font-family: RoadTest;
-    color: #000000;
-/*  TODO: Font indented too far*/
-    font-size:22px;
+  font-family:RoadTest;
+  color:#000000;
+  font-size: 22px;
 }
-.activate{
-    font-weight:bold;
-    color:#2d2a2a;
+.active{
+  color:#2d2a2a;
+  font-weight:bold;
 }
-.text-container p:nth-child(1){
-    font-family: calibre;
-    font-weight:bold;
-    color:#6d6d6d;
-    font-size:22px;
-}
-.text-container p:nth-child(2){
-    font-family: calibre;
-    font-weight:bold;
-    letter-spacing: 1px;
-    color:#lalala;
-    font-size:60px;
-}
-.text-container p:nth-child(3){
-    font-family: myraid pro regular;
-    color:#403e3e;
-    font-size:30px;
-}
-.text-container p{
-    line-height:0px;
-    margin:45px 0px 25px;
-}
-.text-container{
-    position: absolute;
-    left: 13%;
-    top: 42%;
-    transform:translate(-13%,-42%);
-   }
-.text-container button{
-    width:130px;
-    height:42px;
-    border-radius:calibre;
-    font-weight:bold;
-    font-size:14px;
-    outlie:none;
-    margin: 00px 10px;
-    }
-.hire-btn{
-    border:2px solid #373636;
-    color:#3373636;
-    }
-.down-cv{
-/*      Text on buton is black not white*/
-    background-color: #0b0b0b;
-    color:#ffffff
-/*
-    text-color: white !important
- */
-    border:none;
-    }
- button:active{
-    transformation:scale(1,1);
-       }
