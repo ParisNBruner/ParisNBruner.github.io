@@ -1,159 +1,165 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Collapsible sidebar using Bootstrap 4</title>
-
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="Style.css">
-
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <title>Paris | Data Analyst</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #A0E7E5, #FFAEBC);
+            color: #2D3142;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header img {
+            width: 120px;
+            border-radius: 50%;
+            border: 4px solid #FFAEBC;
+        }
+        h1 {
+            font-size: 3em;
+            color: #FF4F79;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #2D3142;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            background-color: #FFE066;
+            color: #2D3142;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .section {
+            padding: 40px 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 20px;
+        }
+        .section h2 {
+            color: #FF4F79;
+        }
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .icons div {
+            text-align: center;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .project-card {
+            background-color: #FFF0F5;
+            padding: 20px;
+            border-radius: 15px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .project-card h3 {
+            margin: 10px 0;
+        }
+        .project-card button {
+            background-color: #FF4F79;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .tool-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #FFAEBC;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>Paris' Portfolio</h3>
-            <strong>PB</strong>
-        </div>
+<header>
+    <img src="https://via.placeholder.com/120" alt="Profile Picture">
+    <h1>Paris</h1>
+    <p class="subtitle">Analyst | Data Enthusiast | Storyteller</p>
+    <button class="cta-button">Let's Talk Data!</button>
+</header>
 
-        <ul class="list-unstyled components">
-
-            <!--TODO: HOME PAGE DROPDOWN-->
-           <!-- <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="fas fa-home"></i>
-                    Home
-                </a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Education</a>
-                    </li>
-                </ul>
-            </li>-->
-
-            <!--TODO - Pages for various projects-->
-            <!--<li>
-                <a href="#">
-                    <i class="fas fa-briefcase"></i>
-                    About
-                </a>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="fas fa-copy"></i>
-                    Pages
-                </a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>-->
-
-            <li>
-                <a href="index.html">
-                    <i class="fas fa-home"></i>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="portfolio.html">
-                    <i class="fas fa-laptop"></i>
-                    Portfolio
-                </a>
-            </li>
-            <li>
-                <a href="mailto:ParisN.Bruner@gmail.com">
-                    <i class="fas fa-paper-plane"></i>
-                    Contact
-                </a>
-            </li>
-        </ul>
-
-        <ul class="list-unstyled CTAs">
-            <li>
-                <a href="https://www.linkedin.com/in/paris-bruner-175840149/" class="linkedin">LinkedIn</a>
-            </li>
-            <li>
-                <a href="https://github.com/ParisNBruner" class="github">Github</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Page Content  -->
-
-    <!--TODO Find a better place to put this-->
-    <div id="content">
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
-            <i class="fas fa-align-left"></i>
-        </button>
-
-        <br></br>
-<!-------------------------------------About ME ------->
-        <h2>About Paris</h2>
-        <p>At a very young age, I was introduced to computers through my Father who works in the IT sector. The capabilities of these machines and their role in society were something that would continue. By the age of 5, I had my own computer and was constantly asking my Dad big questions about how they operated and why they performed the actions the way they did. As I grew older, I began to observe the major role computers played in society, and the dependency we have on them.</p>
-        <p>This interest led me to Digirlz, Girls Who Code summer immersion program, Girls Who Code club, and then ultimately an internship at Expedia .. all before reaching the age of 18.</p>
-        <img src="Child_Paris.png" alt="Paris" width="440" height="280" class="center">
-        <br></br>
-
-        <p>When I got to UWB I knew that I wanted to study computer science but I did not realize that I could tie my lifelong pursuit of community engagement to this on an academic level.
-            It was this season of life that I learned about the STEM LLC and was introduced to CBLR courses. Through this course, I was able to teach with Coding With Kids as a co-teacher coincidently
-            working alongside a fellow UWB woman in STEM who was much farther along her academic journey than I. This opportunity led me to work with Coding With Kids as a lead teacher where I was able to work
-            with neurodiverse students, and young women of color. In many ways, we were able to learn from each other. It was from this experience and my time within the STEM LLC that I knew I wanted to expand
-            past software engineering This later led me to work on a research project surrounding how we can improve the classroom experience for students who want to learn about mathematical modeling.
-        </p>
-
-        <p>After finding my passion for computational social science I began to connect my in and out of classroom experiences to it. This entailed many discussions with advisors, professionals, and professors
-            ultimately resulting in me having three majors to build my desired skill-set. Outside of the classroom, I started multiple research projects including a two-year project called grapevine where we used
-            GIS software(s) to map social disparities.
-        </p>
-
-        <p>I could continue talking about the wonderful opportunities I have had to work on various projects, including my work with A.C.T, and my three years of employment at Makerspace but I believe the work
-            itself is the best example!
-        </p>
-<!----------------------TODO: Education Section --------------->
-       <!-- <div class="line"></div>
-
-        <h2>Education</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
--->
+<section class="section">
+    <h2>Hi, I’m Paris!</h2>
+    <p>I turn messy data into stories, dashboards, and discoveries. Consultant + University of Washington grad with a love for fun visualizations, Python tricks, and uncovering insights that matter.</p>
+    <div class="icons">
+        <div><p>🐍<br>SQL</p></div>
+        <div><p>📊<br>Data Viz</p></div>
+        <div><p>🤖<br>Python</p></div>
     </div>
-</div>
+</section>
 
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<section class="section">
+    <h2>Projects I Loved Working On </h2>
+    <div class="projects">
+        <div class="project-card">
+            <h3>Sales Dashboard</h3>
+            <p>Interactive sales viz for trend analysts.<br><small>#Python #Pandas #Seaborn</small></p>
+            <button>View Project</button>
+        </div>
+        <div class="project-card">
+            <h3>Movie Recommendations</h3>
+            <p>ML-based film recommender system.<br><small>#Python #Scikit-learn</small></p>
+            <button>View Project</button>
+        </div>
+        <div class="project-card">
+            <h3>Customer Segmentation</h3>
+            <p>Clustering customers by behavior.<br><small>#Pandas #NumPy #Matplotlib</small></p>
+            <button>View Project</button>
+        </div>
+    </div>
+</section>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
-    });
-</script>
+<section class="section">
+    <h2>Tools in My Toolkit</h2>
+    <div class="tools">
+        <div class="tool-icon">Py</div>
+        <div class="tool-icon">SQL</div>
+        <div class="tool-icon">JS</div>
+        <div class="tool-icon">ML</div>
+        <div class="tool-icon">Git</div>
+        <div class="tool-icon">Viz</div>
+    </div>
+</section>
+
+<footer>
+    Made with curiosity & caffeine.<br>
+    © 2025 Paris
+</footer>
+
 </body>
-
 </html>
