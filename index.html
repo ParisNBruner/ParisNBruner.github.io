@@ -1,164 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Paris | Data Analyst</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to bottom right, #A0E7E5, #FFAEBC);
-            color: #2D3142;
-        }
-        header {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header img {
-            width: 120px;
-            border-radius: 50%;
-            border: 4px solid #FFAEBC;
-        }
-        h1 {
-            font-size: 3em;
-            color: #FF4F79;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            color: #2D3142;
-            margin-bottom: 20px;
-        }
-        .cta-button {
-            background-color: #FFE066;
-            color: #2D3142;
-            border: none;
-            padding: 12px 24px;
-            font-size: 1em;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-        .section {
-            padding: 40px 20px;
-            background-color: white;
-            margin: 20px;
-            border-radius: 20px;
-        }
-        .section h2 {
-            color: #FF4F79;
-        }
-        .icons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .icons div {
-            text-align: center;
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-around;
-        }
-        .project-card {
-            background-color: #FFF0F5;
-            padding: 20px;
-            border-radius: 15px;
-            width: 280px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .project-card h3 {
-            margin: 10px 0;
-        }
-        .project-card button {
-            background-color: #FF4F79;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        .tools {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .tool-icon {
-            width: 50px;
-            height: 50px;
-            background-color: #FFAEBC;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paris Bruner | BI & Data Visualization</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header>
-    <img src="images/Paris_Bruner.jpg" alt="Profile Picture">
-    <h1>Paris</h1>
-    <p class="subtitle">Analyst | Data Enthusiast | Storyteller</p>
-    <button class="cta-button">Let's Talk Data!</button>
-</header>
+  <div class="container">
+    <header>
+      <img src="your-photo.jpg" alt="Paris Bruner" class="profile-photo">
+      <h1>Paris Bruner</h1>
+      <h2>Business Intelligence & Data Visualization Professional</h2>
+      <p class="tagline">Turning data into clear, actionable insights.</p>
+      <div class="buttons">
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" class="btn yellow">View My LinkedIn</a>
+        <a href="mailto:youremail@example.com" class="btn outline">Email Me</a>
+      </div>
+    </header>
 
-<section class="section">
-    <h2>Hi, I’m Paris!</h2>
-    <p>I'm a Seattle-based data analyst who believes data can be a powerful tool for equity and accountability. I’m especially interested in computational social science and how we can use data to better understand — and challenge — the systems that shape people’s lives.
+    <section class="about">
+      <h3>About Me</h3>
+      <p>
+        I’m a business intelligence consultant based in Seattle, focused on transforming complex data into clear,
+        actionable insights. I work primarily in Power BI and SQL, with experience across the Microsoft data stack.
+        I’m currently expanding my portfolio with new data visualization projects and certifications in Power BI and SQL.
+      </p>
+    </section>
 
-        My work focuses on enterprise data environments, where I use Microsoft tools like Power BI and SQL Server Management Studio (SSMS) to develop reporting solutions, optimize complex queries, and improve the clarity and usability of large datasets. I care about making data both accessible and meaningful — not just for organizations, but for the communities their decisions impact.
-        
-        I bring a mix of technical focus and social perspective to everything I do. I’m drawn to questions about fairness, transparency, and the real-world impact behind the numbers — and I love helping teams connect those dots in clear, actionable ways.</p>
-    <div class="icons">
-        <div><p>🐍<br>SQL</p></div>
-        <div><p>📊<br>Power Bi</p></div>
-    </div>
-</section>
+    <section class="skills">
+      <h3>Skills</h3>
+      <div class="icons">
+        <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg" alt="Power BI"><span>Power BI</span></div>
+        <div><i class="fas fa-database"></i><span>SQL</span></div>
+        <div><i class="fas fa-table"></i><span>Excel</span></div>
+        <div><i class="fas fa-chart-line"></i><span>DAX</span></div>
+        <div><i class="fas fa-cloud"></i><span>Azure</span></div>
+      </div>
+    </section>
 
-<!-- <section class="section">
-    <h2>Projects I Loved Working On </h2>
-    <div class="projects">
-        <div class="project-card">
-            <h3>Sales Dashboard</h3>
-            <p>Interactive sales viz for trend analysts.<br><small>#Python #Pandas #Seaborn</small></p>
-            <button>View Project</button>
-        </div>
-        <div class="project-card">
-            <h3>Movie Recommendations</h3>
-            <p>ML-based film recommender system.<br><small>#Python #Scikit-learn</small></p>
-            <button>View Project</button>
-        </div>
-        <div class="project-card">
-            <h3>Customer Segmentation</h3>
-            <p>Clustering customers by behavior.<br><small>#Pandas #NumPy #Matplotlib</small></p>
-            <button>View Project</button>
-        </div>
-    </div>
-</section> -->
+    <section class="projects">
+      <h3>Projects</h3>
+      <p>
+        Coming soon — I’m building visualizations using open data and exploring ways to share interactive Power BI and Kaggle projects here.
+      </p>
+    </section>
 
-<section class="section">
-    <h2>Tools in My Toolkit</h2>
-    <div class="tools">
-        <div class="tool-icon">SQL</div>
-        <div class="tool-icon">PowerBI</div>
-    </div>
-</section>
-
-<footer>
-   <br>
-    © 2025 Paris
-</footer>
+    <footer>
+      <p>© 2025 Paris Bruner</p>
+    </footer>
+  </div>
 
 </body>
 </html>
