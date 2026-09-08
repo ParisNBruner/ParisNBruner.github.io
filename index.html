@@ -1,88 +1,1180 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paris Bruner | BI & Data Visualization</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+
+  <!--
+    =====================================================
+    👋 WELCOME, FUTURE ME
+
+    This is a simple static portfolio website.
+
+    FILE STRUCTURE:
+      index.html       = the website
+      images/          = photos + project images
+
+    MOST COMMON THINGS TO EDIT:
+      1. Your name
+      2. Headline
+      3. About paragraph
+      4. Skills
+      5. Projects
+      6. LinkedIn / GitHub / email
+      7. Colors in :root
+
+    This site intentionally uses simple HTML + CSS.
+    No React, npm, or build process is required.
+
+    My web development skills are a little rusty,
+    so sections are intentionally organized and
+    commented for easy editing.
+    =====================================================
+  -->
+
+  <!-- Makes the site display correctly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Paris Bruner | Data & Analytics</title>
+
+
+  <!-- =====================================================
+       FONTS
+       =====================================================
+
+       Cormorant Garamond = editorial serif headings
+       Inter = clean body text
+
+       You can change these later if you find fonts you like.
+       ===================================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       1. COLOR PALETTE + DESIGN SETTINGS
+       =====================================================
+
+       This is one of the easiest places to customize.
+
+       Change these colors and the whole site changes with them.
+       ===================================================== */
+
+    :root {
+      --cream: #faf7f0;
+      --white: #ffffff;
+
+      --text: #252329;
+      --muted: #68636a;
+
+      --pink: #f2d5d1;
+      --yellow: #f3d86f;
+      --sage: #cbd4bc;
+
+      --border: #ddd7ce;
+
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
+    }
+
+
+    /* =====================================================
+       2. BASIC RESET
+       ===================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    /* =====================================================
+       3. PAGE WIDTH
+       ===================================================== */
+
+    .page {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       4. NAVIGATION
+       ===================================================== */
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+    }
+
+    .logo {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-button {
+      background: var(--sage);
+      padding: 11px 20px;
+      border-radius: 999px;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       5. HERO SECTION
+       =====================================================
+
+       Desktop:
+         LEFT  = headline + introduction
+         RIGHT = headshot
+
+       Mobile:
+         Everything stacks vertically.
+       ===================================================== */
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      align-items: center;
+      gap: 70px;
+
+      padding: 75px 0 90px;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+
+      color: #667054;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+
+      font-family: var(--serif);
+      font-size: clamp(58px, 7vw, 88px);
+      font-weight: 600;
+      line-height: 0.91;
+      letter-spacing: -0.045em;
+    }
+
+    .hero h1 .accent {
+      color: #7b8867;
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 550px;
+
+      margin-top: 28px;
+
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       6. HERO BUTTONS
+       ===================================================== */
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+      padding: 0 22px;
+
+      border: 1px solid var(--text);
+      border-radius: 999px;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition: 0.2s ease;
+    }
+
+    /*
+      The main button is intentionally pink instead of black.
+    */
+
+    .button-primary {
+      background: var(--pink);
+      border-color: var(--pink);
+    }
+
+    .button-primary:hover {
+      background: #e9c1bc;
+    }
+
+    .button-secondary:hover {
+      background: var(--white);
+    }
+
+
+    /* =====================================================
+       7. HEADSHOT
+       ===================================================== */
+
+    .photo-area {
+      position: relative;
+
+      width: min(100%, 420px);
+      margin-left: auto;
+    }
+
+    /*
+      Pink circle behind the photo.
+    */
+
+    .photo-area::before {
+      content: "";
+
+      position: absolute;
+
+      width: 190px;
+      height: 190px;
+
+      background: var(--pink);
+      border-radius: 50%;
+
+      top: -30px;
+      right: -25px;
+
+      z-index: 0;
+    }
+
+    /*
+      Yellow circle behind the photo.
+    */
+
+    .photo-area::after {
+      content: "";
+
+      position: absolute;
+
+      width: 170px;
+      height: 170px;
+
+      background: var(--yellow);
+      border-radius: 50%;
+
+      bottom: 15px;
+      left: -35px;
+
+      z-index: 0;
+    }
+
+    .headshot {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      border: 8px solid white;
+
+      border-radius: 130px 130px 22px 22px;
+
+      box-shadow: 0 0 0 1px var(--border);
+    }
+
+
+    /* =====================================================
+       8. GENERAL SECTION STYLING
+       ===================================================== */
+
+    .section {
+      border-top: 1px solid var(--border);
+      padding: 70px 0;
+    }
+
+    .section-label {
+      margin-bottom: 10px;
+
+      color: #687055;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(42px, 5vw, 62px);
+      font-weight: 600;
+      line-height: 0.95;
+      letter-spacing: -0.035em;
+    }
+
+
+    /* =====================================================
+       9. ABOUT SECTION
+       ===================================================== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      margin-top: 35px;
+    }
+
+    .about-card {
+      background: #f7f2e9;
+
+      padding: 38px;
+
+      border-radius: 20px;
+    }
+
+    .about-text {
+      max-width: 500px;
+
+      color: #4d494e;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .about-text + .about-text {
+      margin-top: 18px;
+    }
+
+
+    /* =====================================================
+       10. SKILLS
+       ===================================================== */
+
+    .skills-container {
+      padding-top: 5px;
+    }
+
+    .skills-title {
+      margin-bottom: 18px;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .skill {
+      padding: 10px 14px;
+
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /*
+      Alternating colors keep the skills section
+      from feeling too corporate.
+    */
+
+    .skill:nth-child(3n + 1) {
+      background: var(--sage);
+      border-color: var(--sage);
+    }
+
+    .skill:nth-child(3n + 2) {
+      background: var(--pink);
+      border-color: var(--pink);
+    }
+
+    .skill:nth-child(3n + 3) {
+      background: #eee9df;
+      border-color: #eee9df;
+    }
+
+
+    /* =====================================================
+       11. PROJECTS SECTION
+       =====================================================
+
+       You don't have projects yet — that's okay.
+
+       This section is designed so you can easily replace
+       it with actual project cards later.
+       ===================================================== */
+
+    .projects-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 50px;
+
+      margin-top: 35px;
+
+      padding: 45px;
+
+      background: var(--pink);
+
+      border-radius: 22px;
+    }
+
+    .projects-box h2 {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 0.95;
+    }
+
+    .projects-description {
+      align-self: center;
+
+      color: #4f4a4d;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .projects-description .button {
+      margin-top: 20px;
+    }
+
+
+    /* =====================================================
+       12. WHAT I'M EXPLORING
+       ===================================================== */
+
+    .exploring-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+
+      margin-top: 35px;
+    }
+
+    .exploring-card {
+      min-height: 230px;
+
+      padding: 28px;
+
+      border-radius: 20px;
+    }
+
+    .exploring-card:nth-child(1) {
+      background: var(--sage);
+    }
+
+    .exploring-card:nth-child(2) {
+      background: var(--pink);
+    }
+
+    .exploring-card:nth-child(3) {
+      background: var(--yellow);
+    }
+
+    .exploring-card h3 {
+      margin-bottom: 20px;
+
+      font-family: var(--serif);
+      font-size: 31px;
+      font-weight: 600;
+    }
+
+    .exploring-card p {
+      color: #4d494e;
+
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       13. FOOTER
+       ===================================================== */
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 45px 0 55px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-name {
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .footer-location {
+      margin-top: 5px;
+
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 18px;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       14. TABLET + MOBILE
+       =====================================================
+
+       This is the responsive section.
+
+       Think of @media as:
+
+       "If the screen gets smaller than 800px,
+       change these rules."
+
+       The desktop layout becomes a vertical layout.
+       ===================================================== */
+
+    @media (max-width: 800px) {
+
+      /* ---------- Navigation ---------- */
+
+      nav {
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+
+      .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: space-between;
+      }
+
+
+      /* ---------- Hero ---------- */
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 55px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: clamp(52px, 14vw, 72px);
+      }
+
+      /*
+        Move the photograph underneath the hero text.
+      */
+
+      .photo-area {
+        width: min(85%, 360px);
+
+        margin: 0 auto;
+      }
+
+
+      /* ---------- About ---------- */
+
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+
+
+      /* ---------- Projects ---------- */
+
+      .projects-box {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 32px;
+      }
+
+
+      /* ---------- Exploring ---------- */
+
+      .exploring-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .exploring-card {
+        min-height: auto;
+      }
+
+
+      /* ---------- Footer ---------- */
+
+      footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+      }
+
+    }
+
+
+    /* =====================================================
+       15. VERY SMALL PHONES
+       ===================================================== */
+
+    @media (max-width: 480px) {
+
+      .page {
+        width: 90%;
+      }
+
+      .nav-button {
+        padding: 10px 15px;
+      }
+
+      .nav-links {
+        font-size: 13px;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      /*
+        Make the buttons full width on very small phones.
+      */
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .about-card {
+        padding: 28px;
+      }
+
+      .projects-box h2 {
+        font-size: 42px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
 
-  <div class="container">
-    <header>
-      <img src="your-photo.jpg" alt="Paris Bruner" class="profile-photo">
-      <h1>Paris Bruner</h1>
-      <h2>Business Intelligence & Data Visualization Professional</h2>
-      <p class="tagline">Turning data into clear, actionable insights.</p>
-      <div class="buttons">
-        <a href="www.linkedin.com/in/paris-bruner-175840149" class="btn yellow">View My LinkedIn</a>
-        <a href="mailto:ParisNBruner@gmail.com" class="btn yellow">Email Me</a>
+
+  <!-- =====================================================
+       PAGE WRAPPER
+       ===================================================== -->
+
+  <div class="page">
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <nav>
+
+      <!-- EDIT: Your name -->
+      <div class="logo">
+        Paris Bruner
       </div>
+
+
+      <div class="nav-links">
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#work">
+          Work
+        </a>
+
+        <a href="#exploring">
+          Now
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+
+      <a href="https://www.linkedin.com/in/paris-bruner-175840149/" class="nav-button">
+        Let's Connect →
+      </a>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <header class="hero">
+
+
+      <!-- HERO TEXT -->
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Data · People · Better Decisions
+        </div>
+
+
+        <!--
+          EDIT: This is your main positioning statement.
+        -->
+
+        <h1>
+          I turn messy data into
+          <span class="accent">
+            real-world impact.
+          </span>
+        </h1>
+
+
+        <!-- EDIT: Your short introduction -->
+
+        <p class="hero-description">
+          Analytics professional bridging business,
+          technology, and data — with a growing focus
+          on analytics engineering and data science.
+        </p>
+
+
+        <div class="hero-buttons">
+
+
+          <!--
+            EDIT LATER:
+
+            Right now this goes to your Work section.
+
+            Once you have projects, you could change this
+            to your GitHub or a specific project.
+          -->
+
+          <a href="#work" class="button button-primary">
+            See My Work (Soon) →
+          </a>
+
+
+          <a href="#about" class="button button-secondary">
+            About Me
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           HEADSHOT
+
+           IMPORTANT:
+
+           Put your photo inside:
+
+             images/headshot.jpg
+
+           Then change the src below to:
+
+             src="images/headshot.jpg"
+
+           You can also use .png instead of .jpg.
+           ================================================= -->
+
+      <div class="photo-area">
+
+        <img
+          src="images/Nov 2025 Headshot.jpg"
+          alt="Paris Bruner"
+          class="headshot"
+        >
+
+      </div>
+
     </header>
 
-    <section class="about">
-      <h3>About Me</h3>
-      <p>
-        I’m a business intelligence consultant based in Seattle, focused on transforming complex data into clear,
-        actionable insights. I work primarily in Power BI and SQL, with experience across the Microsoft data stack.
-        I’m currently expanding my portfolio with new data visualization projects and certifications in Power BI and SQL.
-      </p>
-    </section>
 
-    <section class="skills">
-      <h3>Skills</h3>
-        <div class="icons">
-      
-          <!-- Power BI -->
-          <div>
-            <img src="https://img.icons8.com/?size=100&id=69674&format=png&color=000000" alt="Power BI" width="24" height="24">
-            <span>Power BI</span>
-          </div>
-      
-          <!-- SQL Server -->
-          <div>
-            <img src="https://img.icons8.com/?size=100&id=77694&format=png&color=000000" alt="SQL Server" width="24" height="24">
-            <span>SQL Server</span>
-          </div>
-      
-          <!-- Excel -->
-          <div>
-            <img src="https://img.icons8.com/?size=100&id=11566&format=png&color=000000" alt="Excel" width="24" height="24">
-            <span>Excel</span>
-          </div>
-      
-          <!-- DAX (no official icon, using Data icon as stand-in) -->
-          <div>
-            <img src="https://img.icons8.com/?size=100&id=2778&format=png&color=000000" alt="DAX" width="24" height="24">
-            <span>DAX</span>
-          </div>
-      
-          <!-- Azure 
-          <div>
-            <img src="https://img.icons8.com/?size=100&id=VLKafOkk3sBX&format=png&color=000000" alt="Azure" width="24" height="24">
-            <span>Azure</span>
-          </div>
-      -->
+    <!-- =====================================================
+         ABOUT SECTION
+         ===================================================== -->
+
+    <section class="section" id="about">
+
+
+      <div class="section-label">
+        About
+      </div>
+
+
+      <h2 class="section-title">
+        A little about me.
+      </h2>
+
+
+      <div class="about-grid">
+
+
+        <!-- ABOUT TEXT -->
+
+        <div class="about-card">
+
+          <p class="about-text">
+
+            I'm an analytics professional who loves turning
+            complex questions into clear answers. I enjoy
+            working at the intersection of business and
+            technology, building reporting solutions, and
+            making data useful to the people who need it.
+
+          </p>
+
+
+          <p class="about-text">
+
+            I'm especially interested in analytics engineering,
+            business engineering, data science, responsible AI,
+            and using data to solve meaningful problems.
+
+          </p>
+
         </div>
-      </section>
+
+
+        <!-- =================================================
+             SKILLS
+
+             EDIT: Add or remove skills here.
+             ================================================= -->
+
+        <div class="skills-container">
+
+          <div class="skills-title">
+            Tools & Skills
+          </div>
+
+
+          <div class="skills">
+
+            <span class="skill">SQL</span>
+
+            <span class="skill">Python</span>
+
+            <span class="skill">Power BI</span>
+
+            <span class="skill">Data Modeling</span>
+
+            <span class="skill">Analytics</span>
+
+            <span class="skill">Business Analysis</span>
+
+            <span class="skill">Data Strategy</span>
+
+            <span class="skill">Data Visualization</span>
+
+            <span class="skill">Analytics Engineering</span>
+
+            <span class="skill">Responsible AI</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="projects">
-      <h3>Projects</h3>
-      <p>
-        Coming soon — I’m building visualizations using open data and exploring ways to share interactive Power BI and Kaggle projects here.
-      </p>
+
+    <!-- =====================================================
+         WORK / PROJECTS
+         =====================================================
+
+         Eventually, this is where your actual projects
+         will live.
+
+         For example:
+
+         - Customer Churn Analysis
+         - Seattle Housing Analysis
+         - Power BI Dashboard
+         - Python Data Science Project
+
+         We can redesign this section once you have
+         your first project.
+         ===================================================== -->
+
+    <section class="section" id="work">
+
+
+      <div class="section-label">
+        Work
+      </div>
+
+
+      <div class="projects-box">
+
+
+        <div>
+
+          <h2>
+            Projects<br>
+            coming soon.
+          </h2>
+
+        </div>
+
+
+        <div class="projects-description">
+
+          <p>
+            I'm currently building a small collection of
+            projects that show how I approach real-world
+            data problems — not just which tools I know.
+          </p>
+
+
+          <a href="#" class="button">
+            Check Back Soon →
+          </a>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <footer>
-      <p>© 2025 Paris Bruner</p>
+
+    <!-- =====================================================
+         WHAT I'M EXPLORING
+         ===================================================== -->
+
+    <section class="section" id="exploring">
+
+
+      <div class="section-label">
+        What I'm Exploring
+      </div>
+
+
+      <div class="exploring-grid">
+
+
+        <!-- CARD 1 -->
+
+        <article class="exploring-card">
+
+          <h3>
+            Next
+          </h3>
+
+          <p>
+            Deeper SQL, Python, analytics engineering,
+            and practical data science.
+          </p>
+
+        </article>
+
+
+        <!-- CARD 2 -->
+
+        <article class="exploring-card">
+
+          <h3>
+            Interested In
+          </h3>
+
+          <p>
+            Data products, business systems, responsible AI,
+            and turning analysis into action.
+          </p>
+
+        </article>
+
+
+        <!-- CARD 3 -->
+
+        <article class="exploring-card">
+
+          <h3>
+            Long Term
+          </h3>
+
+          <p>
+            Using data to solve meaningful problems and
+            create more thoughtful, equitable systems.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER / CONTACT
+         ===================================================== -->
+
+    <footer id="contact">
+
+
+      <div>
+
+        <!-- EDIT: Your name -->
+
+        <div class="footer-name">
+          Paris Bruner
+        </div>
+
+
+        <div class="footer-location">
+          Seattle, WA
+        </div>
+
+      </div>
+
+
+      <div class="social-links">
+
+
+        <!--
+          EDIT:
+
+          Replace # with your actual LinkedIn URL.
+
+          Example:
+
+          href="https://www.linkedin.com/in/yourusername/"
+        -->
+
+        <a href="https://www.linkedin.com/in/paris-bruner-175840149/" aria-label="LinkedIn">
+          LinkedIn
+        </a>
+
+
+        <!--
+          EDIT:
+
+          Replace # with your GitHub URL.
+        -->
+
+        <a href="https://github.com/ParisNBruner" aria-label="GitHub">
+          GitHub
+        </a>
+
+
+        <!--
+          EDIT:
+
+          Replace this email address with your actual email.
+        -->
+
+        <a href="mailto:ParisN.Bruner@gmail.com" aria-label="Email">
+          Email
+        </a>
+
+      </div>
+
     </footer>
+
+
   </div>
 
-</body>
-</html>
 
-<img src="" alt="SQL Server">
+</body>
+
+</html>
+```
