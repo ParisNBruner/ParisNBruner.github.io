@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf7f0">
+  <meta name="description" content="Contact Paris Bruner, Business Architecture Specialist focused on digital adoption and analytics.">
+  <title>Paris Bruner | Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #faf7f0;
+      --white: #fff;
+      --text: #252329;
+      --muted: #68636a;
+      --pink: #f2d5d1;
+      --yellow: #f3d86f;
+      --sage: #cbd4bc;
+      --border: #ddd7ce;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      min-height: 100vh;
+      margin: 0;
+      padding: 28px 16px;
+      place-items: center;
+      background: var(--cream);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #667054;
+      outline-offset: 4px;
+    }
+
+    .contact-card {
+      width: min(100%, 440px);
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--sage);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 14px 40px rgba(37, 35, 41, 0.06);
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mark {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      color: #667054;
+      font-size: 11px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .portrait-wrap {
+      position: relative;
+      width: 104px;
+      margin-bottom: 22px;
+      padding: 7px;
+      background: var(--sage);
+    }
+
+    .portrait-wrap::after {
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+      width: 28px;
+      height: 28px;
+      background: var(--yellow);
+      content: "";
+      z-index: 0;
+    }
+
+    .portrait {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border: 3px solid var(--white);
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #667054;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 0.98;
+    }
+
+    .role {
+      margin: 10px 0 0;
+      color: #667054;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .location {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .headline {
+      margin: 18px 0 0;
+      color: #4d494e;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .contact-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .action {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .action-primary {
+      border-color: var(--pink);
+      background: var(--pink);
+    }
+
+    .action:hover {
+      border-color: #a9b49a;
+      background: #f7f8f3;
+    }
+
+    .action-primary:hover {
+      border-color: #e9c1bc;
+      background: #e9c1bc;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 20px;
+      padding-top: 17px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .links a {
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 380px) {
+      .contact-card {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="contact-card" aria-labelledby="name">
+    <div class="topline">
+      <span class="mark">Digital adoption · Analytics</span>
+      <a class="back-link" href="Supporting%20Files/Paris_Bruner_Resume_Oct26.pdf">Download my resume</a>
+    </div>
+
+    <div class="portrait-wrap">
+      <img class="portrait" src="Images/Nov25_Headshot.JPG" alt="Paris Bruner">
+    </div>
+
+    <p class="eyebrow">Data · People · Better Decisions</p>
+    <h1 id="name">Paris Bruner</h1>
+    <p class="role">Business Architecture Specialist</p>
+    <p class="location">Seattle, Washington</p>
+    <p class="headline">Connecting business needs, data, and technology so teams can put digital tools to work.</p>
+
+    <div class="contact-actions" aria-label="Contact Paris">
+      <a class="action action-primary" href="mailto:ParisN.Bruner@gmail.com">Email Me</a>
+      <a class="action" href="index.html">View My Portfolio</a>
+    </div>
+
+    <nav class="links" aria-label="Professional links">
+      <a href="https://www.linkedin.com/in/paris-bruner-175840149/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/ParisNBruner" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="index.html#work">Projects</a>
+    </nav>
+  </main>
+</body>
+</html>

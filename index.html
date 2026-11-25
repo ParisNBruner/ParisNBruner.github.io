@@ -34,12 +34,10 @@
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
 
   <style>
-
     /* =====================================================
        1. COLOR PALETTE + DESIGN SETTINGS
        ===================================================== */
@@ -125,6 +123,7 @@
     .nav-links {
       display: flex;
       gap: 28px;
+      margin-left: clamp(24px, 3vw, 44px);
       font-size: 14px;
       color: var(--muted);
     }
@@ -140,6 +139,15 @@
 
       font-size: 13px;
       font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-left: auto;
     }
 
 
@@ -157,20 +165,20 @@
 
     .hero {
       display: grid;
-      grid-template-columns: 1fr 0.9fr;
+      grid-template-columns: minmax(210px, 0.72fr) minmax(0, 1.28fr);
       align-items: center;
-      gap: 70px;
+      gap: 64px;
 
-      padding: 75px 0 90px;
+      padding: 64px 0 72px;
     }
 
     .eyebrow {
-      margin-bottom: 18px;
+      margin-bottom: 12px;
 
       color: #667054;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
@@ -178,25 +186,38 @@
       max-width: 650px;
 
       font-family: var(--serif);
-      font-size: clamp(58px, 7vw, 88px);
+      font-size: 66px;
       font-weight: 600;
-      line-height: 0.91;
-      letter-spacing: -0.045em;
+      line-height: 0.98;
+      letter-spacing: 0;
     }
 
     .hero h1 .accent {
-      color: #7b8867;
-      font-style: italic;
+      color: #667054;
+      font-style: normal;
     }
 
     .hero-description {
       max-width: 550px;
 
-      margin-top: 28px;
+      margin-top: 22px;
 
       color: var(--muted);
-      font-size: 17px;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .hero-role {
+      margin-top: 12px;
+      color: #667054;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-location {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
 
@@ -207,9 +228,32 @@
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
 
-      margin-top: 30px;
+      margin-top: 24px;
+    }
+
+    .hero .button {
+      min-height: 44px;
+      padding: 0 16px;
+      border-color: var(--text);
+      border-radius: 0;
+      background: transparent;
+      font-size: 12px;
+      transition: background-color 160ms ease;
+    }
+
+    .hero .button-primary {
+      border-color: var(--pink);
+      background: var(--pink);
+    }
+
+    .hero .button-primary:hover {
+      background: #e9c1bc;
+    }
+
+    .hero .button-secondary:hover {
+      background: var(--white);
     }
 
     .button {
@@ -254,48 +298,24 @@
     .photo-area {
       position: relative;
 
-      width: min(100%, 420px);
-      margin-left: auto;
+      width: min(100%, 300px);
+      margin: 0;
+      padding: 12px;
+      background: var(--sage);
     }
-
-    /*
-      Pink circle behind the photo.
-    */
-
-    .photo-area::before {
-      content: "";
-
-      position: absolute;
-
-      width: 190px;
-      height: 190px;
-
-      background: var(--pink);
-      border-radius: 50%;
-
-      top: -30px;
-      right: -25px;
-
-      z-index: 0;
-    }
-
-    /*
-      Yellow circle behind the photo.
-    */
 
     .photo-area::after {
       content: "";
 
       position: absolute;
 
-      width: 170px;
-      height: 170px;
+      width: 52px;
+      height: 52px;
 
       background: var(--yellow);
-      border-radius: 50%;
 
-      bottom: 15px;
-      left: -35px;
+      bottom: -14px;
+      right: -14px;
 
       z-index: 0;
     }
@@ -309,11 +329,7 @@
 
       object-fit: cover;
 
-      border: 8px solid white;
-
-      border-radius: 130px 130px 22px 22px;
-
-      box-shadow: 0 0 0 1px var(--border);
+      border: 5px solid white;
     }
 
 
@@ -349,33 +365,58 @@
        9. ABOUT SECTION
        ===================================================== */
 
-    .about-grid {
+    .value-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      gap: 60px;
-
-      margin-top: 35px;
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+      gap: 48px;
+      margin-top: 28px;
     }
 
-    .about-card {
-      background: #f7f2e9;
-
-      padding: 38px;
-
-      border-radius: 20px;
-    }
-
-    .about-text {
-      max-width: 500px;
-
+    .value-copy p {
       color: #4d494e;
-      font-size: 16px;
-      line-height: 1.75;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
-    .about-text + .about-text {
-      margin-top: 18px;
+    .value-copy p+p {
+      margin-top: 14px;
+    }
+
+    .value-copy .hire-note {
+      margin-top: 22px;
+      padding-left: 16px;
+      border-left: 4px solid var(--pink);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .value-skills {
+      display: grid;
+      gap: 18px;
+    }
+
+    .value-skill-group {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .value-skill-group:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .value-skill-group h3 {
+      margin-bottom: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .value-skill-group p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
     }
 
 
@@ -383,142 +424,183 @@
        10. SKILLS
        ===================================================== */
 
-    .skills-container {
-      padding-top: 5px;
-    }
-
-    .skills-title {
-      margin-bottom: 18px;
-
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-    }
-
-    .skill {
-      padding: 10px 14px;
-
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    /*
-      Alternating colors keep the skills section
-      from feeling too corporate.
-    */
-
-    .skill:nth-child(3n + 1) {
-      background: var(--sage);
-      border-color: var(--sage);
-    }
-
-    .skill:nth-child(3n + 2) {
-      background: var(--pink);
-      border-color: var(--pink);
-    }
-
-    .skill:nth-child(3n + 3) {
-      background: #eee9df;
-      border-color: #eee9df;
-    }
-
-
     /* =====================================================
        11. PROJECTS SECTION
        ===================================================== */
 
-    .projects-box {
+    .project-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      gap: 50px;
-
-      margin-top: 35px;
-
-      padding: 45px;
-
-      background: var(--pink);
-
-      border-radius: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 30px;
     }
 
-    .projects-box h2 {
-      font-family: var(--serif);
-      font-size: 48px;
+    .project-item {
+      display: flex;
+      min-height: 310px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      border-top: 3px solid var(--sage);
+    }
+
+    .project-heading {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .project-icon {
+      display: grid;
+      width: 48px;
+      aspect-ratio: 1;
+      place-items: center;
+      border-radius: 8px;
+      background: #f7f2e9;
+      color: var(--text);
+    }
+
+    .project-icon svg,
+    .interest-icon svg,
+    .project-link svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    .project-type {
+      margin: 0;
+      color: #667054;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .project-number {
+      color: var(--muted);
+      font-size: 11px;
       font-weight: 600;
-      line-height: 0.95;
+      letter-spacing: 0.08em;
     }
 
-    .projects-description {
-      align-self: center;
+    .project-item h3 {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.02;
+    }
 
-      color: #4f4a4d;
-      font-size: 15px;
+    .project-description {
+      max-width: 480px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
       line-height: 1.7;
     }
 
-    .projects-description .button {
-      margin-top: 20px;
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .project-tag {
+      padding: 5px 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: auto;
+      white-space: nowrap;
+    }
+
+    .project-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .project-list-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .project-list-note a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
 
     /* =====================================================
-       12. WHAT I'M EXPLORING
+       12. AREAS OF INTEREST
        ===================================================== */
 
     .exploring-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 16px;
-
-      margin-top: 35px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
     }
 
     .exploring-card {
-      min-height: 230px;
-
-      padding: 28px;
-
-      border-radius: 20px;
+      min-height: 0;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
     }
 
-    .exploring-card:nth-child(1) {
+    .interest-icon {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 16px;
+      place-items: center;
+      border-radius: 4px;
       background: var(--sage);
+      color: var(--text);
     }
 
-    .exploring-card:nth-child(2) {
-      background: var(--pink);
-    }
-
-    .exploring-card:nth-child(3) {
-      background: var(--yellow);
+    .interest-icon svg {
+      width: 18px;
+      height: 18px;
     }
 
     .exploring-card h3 {
-      margin-bottom: 20px;
+      margin-bottom: 8px;
 
       font-family: var(--serif);
-      font-size: 31px;
+      font-size: 25px;
       font-weight: 600;
+      line-height: 1.05;
     }
 
     .exploring-card p {
-      color: #4d494e;
-
-      font-size: 14px;
-      line-height: 1.65;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
     }
 
 
@@ -552,6 +634,16 @@
       font-size: 12px;
     }
 
+    .footer-card-link {
+      display: inline-block;
+      margin-top: 7px;
+      color: #667054;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .social-links {
       display: flex;
       gap: 18px;
@@ -581,8 +673,13 @@
         order: 3;
 
         width: 100%;
+        margin-left: 0;
 
         justify-content: space-between;
+      }
+
+      .nav-actions {
+        flex-wrap: wrap;
       }
 
 
@@ -591,13 +688,13 @@
       .hero {
         grid-template-columns: 1fr;
 
-        gap: 45px;
+        gap: 34px;
 
-        padding: 55px 0 70px;
+        padding: 42px 0 50px;
       }
 
       .hero h1 {
-        font-size: clamp(52px, 14vw, 72px);
+        font-size: 46px;
       }
 
       /*
@@ -605,40 +702,31 @@
       */
 
       .photo-area {
-        width: min(85%, 360px);
-
-        margin: 0 auto;
+        width: min(58%, 230px);
       }
 
 
-      /* ---------- About ---------- */
-
-      .about-grid {
+      .value-grid {
         grid-template-columns: 1fr;
-
-        gap: 30px;
+        gap: 32px;
       }
 
 
       /* ---------- Projects ---------- */
 
-      .projects-box {
+      .project-list {
         grid-template-columns: 1fr;
+      }
 
-        gap: 25px;
-
-        padding: 32px;
+      .project-item {
+        min-height: 0;
       }
 
 
       /* ---------- Exploring ---------- */
 
       .exploring-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .exploring-card {
-        min-height: auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
 
@@ -672,6 +760,14 @@
         gap: 10px;
       }
 
+      .nav-actions {
+        width: 100%;
+      }
+
+      .exploring-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero h1 {
         font-size: 52px;
       }
@@ -693,16 +789,7 @@
         width: 100%;
       }
 
-      .about-card {
-        padding: 28px;
-      }
-
-      .projects-box h2 {
-        font-size: 42px;
-      }
-
     }
-
   </style>
 
 </head>
@@ -728,12 +815,12 @@
       <div class="logo">
         Paris Bruner
       </div>
-
+      
 
       <div class="nav-links">
 
-        <a href="#about">
-          About
+        <a href="#value">
+          Value
         </a>
 
         <a href="#work">
@@ -741,7 +828,7 @@
         </a>
 
         <a href="#exploring">
-          Now
+          Interests
         </a>
 
         <a href="#contact">
@@ -751,9 +838,14 @@
       </div>
 
 
-      <a href="https://www.linkedin.com/in/paris-bruner-175840149/" class="nav-button">
-        Let's Connect →
-      </a>
+      <div class="nav-actions">
+        <a class="nav-button" href="Supporting%20Files/Paris_Bruner_Resume_Oct26.pdf" download>
+          Download resume (PDF)
+        </a>
+        <a href="https://www.linkedin.com/in/paris-bruner-175840149/" class="nav-button">
+          Let's Connect →
+        </a>
+      </div>
 
     </nav>
 
@@ -764,156 +856,87 @@
 
     <header class="hero">
 
-
-      <!-- HERO TEXT -->
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          Data · People · Better Decisions
-        </div>
-
-
-        <!--
-          main positioning statement.
-        -->
-
-        <h1>
-          I turn messy data into
-          <span class="accent">
-            real-world impact.
-          </span>
-        </h1>
-
-
-        <!-- short introduction -->
-
-        <p class="hero-description">
-          Analytics professional bridging business,
-          technology, and data — with a growing focus
-          on analytics engineering and data science.
-        </p>
-
-
-        <div class="hero-buttons">
-
-
-          <!--
-            EDIT LATER: Work section.
-          -->
-
-          <a href="#work" class="button button-primary">
-            See My Work (Soon) →
-          </a>
-
-
-          <a href="#about" class="button button-secondary">
-            About Me
-          </a>
-
-        </div>
-
+      <div class="photo-area">
+        <img src="Images/Nov25_Headshot.JPG" alt="Paris Bruner" class="headshot">
       </div>
 
+      <div class="hero-content">
+        <p class="eyebrow">Digital adoption · Analytics · Data solutions</p>
+        <h1 id="profile-name">Paris Bruner</h1>
+        <p class="hero-role">Business Architecture Specialist</p>
+        <p class="hero-location">Seattle, Washington</p>
+        <p class="hero-description">
+          I help organizations turn digital tools and data into practical ways of
+          working. By connecting business needs with analytics, reporting, and
+          technology, I make complex information easier to use and decisions
+          easier to act on.
+        </p>
 
-      <!-- =================================================
-           HEADSHOT
-           ================================================= -->
-
-      <div class="photo-area">
-
-        <img
-          src="Images/Nov25_Headshot.JPG"
-          alt="Paris Bruner"
-          class="headshot"
-        >
-
+        <div class="hero-buttons">
+          <a href="#work" class="button button-primary">
+            See My Work →
+          </a>
+          <a href="#value" class="button button-secondary">
+            How I Create Value
+          </a>
+        </div>
       </div>
 
     </header>
 
 
     <!-- =====================================================
-         ABOUT SECTION
+         HOW I CREATE VALUE
          ===================================================== -->
 
-    <section class="section" id="about">
-
+    <section class="section" id="value" aria-labelledby="value-title">
 
       <div class="section-label">
-        About
+        How I Create Value
       </div>
 
-
-      <h2 class="section-title">
-        A little about me.
+      <h2 class="section-title" id="value-title">
+        Making technology useful to people.
       </h2>
 
+      <div class="value-grid">
 
-      <div class="about-grid">
-
-
-        <!-- ABOUT TEXT -->
-
-        <div class="about-card">
-
-          <p class="about-text">
-
-            I'm an analytics professional who loves turning
-            complex questions into clear answers. I enjoy
-            working at the intersection of business and
-            technology, building reporting solutions, and
-            making data useful to the people who need it.
-
+        <div class="value-copy">
+          <p>
+            I pair business and solution analysis with hands-on analytics to help
+            teams move from requirements to useful digital tools. I've delivered
+            enterprise reporting, self-service dashboards, governance practices,
+            and data applications in partnership with business stakeholders,
+            designers, and developers.
           </p>
 
-
-          <p class="about-text">
-
-            I'm especially interested in analytics engineering,
-            business engineering, data science, responsible AI,
-            and using data to solve meaningful problems.
-
+          <p>
+            My experience spans Power BI development, enterprise data solutions,
+            workflow automation, data quality, and Responsible AI-aligned practices.
           </p>
 
+          <p class="hire-note">
+            I bridge business goals with technical delivery, helping teams turn
+            complex requirements into trusted insights and digital tools people
+            can use.
+          </p>
         </div>
 
-
-        <!-- =================================================
-             SKILLS
-             ================================================= -->
-
-        <div class="skills-container">
-
-          <div class="skills-title">
-            Tools & Skills
+        <div class="value-skills" aria-label="Experience areas and platforms">
+          <div class="value-skill-group">
+            <h3>Business and delivery</h3>
+            <p>Business analysis, requirements gathering, solution scoping, roadmap coordination, stakeholder alignment, cross-functional delivery, process improvement, data strategy.</p>
           </div>
 
-
-          <div class="skills">
-
-            <span class="skill">SQL</span>
-
-            <span class="skill">Python</span>
-
-            <span class="skill">Power BI</span>
-
-            <span class="skill">Data Modeling</span>
-
-            <span class="skill">Analytics</span>
-
-            <span class="skill">Business Analysis</span>
-
-            <span class="skill">Data Strategy</span>
-
-            <span class="skill">Data Visualization</span>
-
-            <span class="skill">Analytics Engineering</span>
-
-            <span class="skill">Responsible AI</span>
-
+          <div class="value-skill-group">
+            <h3>Analytics and platforms</h3>
+            <p>SQL, Power BI, data modeling, analytics, data visualization, analytics engineering, T-SQL, SQL Server, Microsoft Fabric, Dataverse, Power Apps, Power Automate, Excel, KPI frameworks, self-service analytics.</p>
           </div>
 
+          <div class="value-skill-group">
+            <h3>Adoption, governance, and AI</h3>
+            <p>Data quality and discoverability, data governance, workflow optimization, reporting automation, Microsoft Copilot Studio, Responsible AI.</p>
+          </div>
         </div>
 
       </div>
@@ -925,41 +948,99 @@
          WORK / PROJECTS
          ===================================================== -->
 
-    <section class="section" id="work">
-
+    <section class="section" id="work" aria-labelledby="work-title">
 
       <div class="section-label">
-        Work
+        01 · Selected Work
       </div>
 
+      <h2 class="section-title" id="work-title">
+        Selected projects.
+      </h2>
 
-      <div class="projects-box">
+      <div class="project-list">
 
+        <article class="project-item">
 
-        <div>
+          <div class="project-heading">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 5h16v12H9l-5 3V5Z"></path>
+                <path d="M8 9h8"></path>
+                <path d="M8 13h5"></path>
+              </svg>
+            </div>
+            <span class="project-number">01</span>
+          </div>
 
-          <h2>
-            Projects<br>
-            coming soon.
-          </h2>
+          <div>
+            <p class="project-type">Applied AI · Communications</p>
+            <h3>Stakeholder Communications Advisor</h3>
+            <p class="project-description">
+              A Copilot-agent concept exploring how AI can help teams make stakeholder communication clearer and more intentional. It connects business context with audience-aware messaging, showing how an assistant could support people as they shape and share important updates.
+            </p>
+            <div class="project-tags" aria-label="Project topics">
+              <span class="project-tag">Copilot agent</span>
+              <span class="project-tag">Stakeholder Communication</span>
+              <a class="project-tag" href="#applied-ai">Applied AI &amp; Automation</a>
+              <a class="project-tag" href="#digital-adoption">Digital Adoption</a>
+            </div>
+          </div>
 
-        </div>
-
-
-        <div class="projects-description">
-
-          <p>
-            I'm currently building a small collection of
-            projects that show how I approach real-world
-            data problems — not just which tools I know.
-          </p>
-
-
-          <a href="#" class="button">
-            Check Back Soon →
+          <a class="button button-secondary project-link"
+            href="https://github.com/ParisNBruner/Applied-AI-Solutions/blob/main/%28Copilot%20Agent%29%20Stakeholder%20Communications%20Advisor.pptx" target="_blank"
+            rel="noopener noreferrer">
+            Open presentation
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 3h7v7"></path>
+              <path d="M10 14 21 3"></path>
+              <path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"></path>
+            </svg>
           </a>
 
-        </div>
+        </article>
+
+        <article class="project-item">
+
+          <div class="project-heading">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="7" cy="8" r="3"></circle>
+                <circle cx="17" cy="8" r="2"></circle>
+                <circle cx="12" cy="17" r="3"></circle>
+                <path d="m9 10 2 4"></path>
+                <path d="m15.5 10-2 4"></path>
+              </svg>
+            </div>
+            <span class="project-number">02</span>
+          </div>
+
+          <div>
+            <p class="project-type">Applied AI · Networking</p>
+            <h3>Networking Relationship Hub</h3>
+            <p class="project-description">
+              A Copilot-agent concept for making professional relationship management easier to sustain. It explores how an AI-supported workflow could help people keep connections organized and make follow-up more thoughtful, applying accessible technology to a familiar day-to-day need.
+            </p>
+            <div class="project-tags" aria-label="Project topics">
+              <span class="project-tag">Copilot Agent</span>
+              <span class="project-tag">Relationship management</span>
+              <a class="project-tag" href="#applied-ai">Applied AI &amp; Automation</a>
+              <a class="project-tag" href="#digital-adoption">Digital Adoption</a>
+            </div>
+          </div>
+
+          <a class="button button-secondary project-link"
+            href="https://github.com/ParisNBruner/Applied-AI-Solutions/blob/main/%28%20Copilot%20Agent%29%20Networking%20Relationship%20Hub.pptx" target="_blank"
+            rel="noopener noreferrer">
+            Open presentation
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 3h7v7"></path>
+              <path d="M10 14 21 3"></path>
+              <path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+
+        </article>
 
       </div>
 
@@ -970,12 +1051,17 @@
          WHAT I'M EXPLORING
          ===================================================== -->
 
-    <section class="section" id="exploring">
+    <section class="section" id="exploring" aria-labelledby="interests-title">
 
 
       <div class="section-label">
-        What I'm Exploring
+        02 · What I Work On
       </div>
+
+
+      <h2 class="section-title" id="interests-title">
+        Problems I like solving.
+      </h2>
 
 
       <div class="exploring-grid">
@@ -983,15 +1069,22 @@
 
         <!-- CARD 1 -->
 
-        <article class="exploring-card">
+        <article class="exploring-card" id="digital-adoption">
+
+          <div class="interest-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12h14"></path>
+              <path d="m13 6 6 6-6 6"></path>
+              <circle cx="5" cy="12" r="2"></circle>
+            </svg>
+          </div>
 
           <h3>
-            Next
+            Digital Adoption
           </h3>
 
           <p>
-            Deeper SQL, Python, analytics engineering,
-            and practical data science.
+            Helping teams put data and technology to work in practical, day-to-day workflows.
           </p>
 
         </article>
@@ -999,15 +1092,28 @@
 
         <!-- CARD 2 -->
 
-        <article class="exploring-card">
+        <article class="exploring-card" id="applied-ai">
+
+          <div class="interest-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v3"></path>
+              <path d="M12 18v3"></path>
+              <path d="m4.2 4.2 2.1 2.1"></path>
+              <path d="m17.7 17.7 2.1 2.1"></path>
+              <path d="M3 12h3"></path>
+              <path d="M18 12h3"></path>
+              <path d="m4.2 19.8 2.1-2.1"></path>
+              <path d="m17.7 6.3 2.1-2.1"></path>
+              <circle cx="12" cy="12" r="4"></circle>
+            </svg>
+          </div>
 
           <h3>
-            Interested In
+            Applied AI &amp; Automation
           </h3>
 
           <p>
-            Data products, business systems, responsible AI,
-            and turning analysis into action.
+            Exploring accessible, responsible AI applications that improve workflows and support teams.
           </p>
 
         </article>
@@ -1017,13 +1123,40 @@
 
         <article class="exploring-card">
 
+          <div class="interest-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 19V5"></path>
+              <path d="M4 19h17"></path>
+              <path d="m7 15 4-4 3 2 6-7"></path>
+              <path d="M16 6h4v4"></path>
+            </svg>
+          </div>
+
           <h3>
-            Long Term
+            Self-Service Analytics
           </h3>
 
           <p>
-            Using data to solve meaningful problems and
-            create more thoughtful, equitable systems.
+            Building clear reporting, dependable data practices, and useful insights for better decisions.
+          </p>
+
+        </article>
+
+        <article class="exploring-card">
+
+          <div class="interest-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+          </div>
+
+          <h3>
+            Data Governance &amp; Quality
+          </h3>
+
+          <p>
+            Strengthening trust through data quality, discoverability, documentation, and responsible practices.
           </p>
 
         </article>
@@ -1048,6 +1181,9 @@
           Paris Bruner
         </div>
 
+        <a class="footer-card-link" href="contact.html">
+          Virtual Business Card
+        </a>
 
         <div class="footer-location">
           Seattle, WA
@@ -1098,4 +1234,3 @@
 </body>
 
 </html>
-```
